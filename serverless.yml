@@ -1,18 +1,18 @@
-org: trainwithshubham
+org: guidetodevops
+# "app" enables Serverless Framework Dashboard features and sharing them with other Services.
 app: aws-node-http-api-project
 service: aws-node-http-api-project
-frameworkVersion: '3'
 
 provider:
   name: aws
-  runtime: nodejs14.x
-  region: us-east-1
+  runtime: nodejs22.x
+  region: us-east-2
   iamRoleStatements:
     - Effect: Allow
       Action:
         - dynamodb:*
       Resource:
-        - arn:aws:dynamodb:us-east-1:626072240565:table/KaamKaro
+        - arn:aws:dynamodb:us-east-2:832871077374:table/KaamKaro
 
 functions:
   hello:
